@@ -10,37 +10,40 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PostNewCell" customModule="ProjectSummury" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="375" id="KGk-i7-Jjw" customClass="PostNewCell" customModule="ProjectSummury" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="375"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="375"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgl-8F-iND" userLabel="Title" customClass="HeaderPostView" customModule="ProjectSummury" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="8" width="320" height="44"/>
                         <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="Vzp-Y8-pbZ"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="07E-88-4dW" userLabel="Image" customClass="ContentView" customModule="ProjectSummury" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="52" width="320" height="100"/>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="07E-88-4dW" userLabel="Image" customClass="ContentViewCell" customModule="ProjectSummury" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="60" width="320" height="100"/>
                         <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="vRE-54-1d3" userLabel="Interactive" customClass="LikeRateView" customModule="ProjectSummury" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="160" width="320" height="100"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRE-54-1d3" userLabel="Interactive" customClass="InteractiveView" customModule="ProjectSummury" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="168" width="320" height="91"/>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="3RS-Gp-DDs" userLabel="Description" customClass="DescriptionView" customModule="ProjectSummury" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="268" width="320" height="100"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3RS-Gp-DDs" userLabel="Description" customClass="DescriptionView" customModule="ProjectSummury" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="267" width="320" height="100"/>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" placeholder="YES" id="X6N-oI-z8C"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fgl-8F-iND" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3Oq-bP-haC"/>
-                    <constraint firstItem="fgl-8F-iND" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="75h-o5-tiY"/>
                     <constraint firstItem="3RS-Gp-DDs" firstAttribute="centerX" secondItem="fgl-8F-iND" secondAttribute="centerX" id="CHF-ep-u2z"/>
+                    <constraint firstItem="3RS-Gp-DDs" firstAttribute="top" secondItem="vRE-54-1d3" secondAttribute="bottom" constant="8" id="CcE-mo-poZ"/>
                     <constraint firstAttribute="trailing" secondItem="fgl-8F-iND" secondAttribute="trailing" id="JGo-ZF-ngv"/>
                     <constraint firstItem="3RS-Gp-DDs" firstAttribute="leading" secondItem="fgl-8F-iND" secondAttribute="leading" id="JsM-jm-7ht"/>
                     <constraint firstItem="3RS-Gp-DDs" firstAttribute="top" secondItem="vRE-54-1d3" secondAttribute="bottom" constant="8" id="KgZ-EG-W0y"/>
@@ -50,7 +53,11 @@
                     <constraint firstItem="vRE-54-1d3" firstAttribute="top" secondItem="07E-88-4dW" secondAttribute="bottom" constant="8" id="W3G-kT-J0u"/>
                     <constraint firstItem="vRE-54-1d3" firstAttribute="centerX" secondItem="fgl-8F-iND" secondAttribute="centerX" id="XNK-xz-xDm"/>
                     <constraint firstItem="07E-88-4dW" firstAttribute="leading" secondItem="fgl-8F-iND" secondAttribute="leading" id="Xw0-3l-rQc"/>
+                    <constraint firstItem="fgl-8F-iND" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="afa-Ax-LRF"/>
+                    <constraint firstItem="3RS-Gp-DDs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gw7-hp-fl3"/>
+                    <constraint firstAttribute="bottom" secondItem="3RS-Gp-DDs" secondAttribute="bottom" constant="8" id="mQ8-iV-dU2"/>
                     <constraint firstAttribute="trailing" secondItem="07E-88-4dW" secondAttribute="trailing" id="rD8-fF-i7T"/>
+                    <constraint firstAttribute="trailing" secondItem="3RS-Gp-DDs" secondAttribute="trailing" id="uJe-r6-ixV"/>
                     <constraint firstItem="vRE-54-1d3" firstAttribute="leading" secondItem="fgl-8F-iND" secondAttribute="leading" id="uRo-yT-drX"/>
                 </constraints>
             </tableViewCellContentView>
@@ -59,9 +66,9 @@
                 <outlet property="contentPostView" destination="07E-88-4dW" id="9dK-U7-EK2"/>
                 <outlet property="descriptionView" destination="3RS-Gp-DDs" id="8rm-ih-3me"/>
                 <outlet property="headerPostView" destination="fgl-8F-iND" id="vbU-uS-JQU"/>
-                <outlet property="likeRateView" destination="vRE-54-1d3" id="afU-tw-M0O"/>
+                <outlet property="interactiveView" destination="vRE-54-1d3" id="dxD-bc-uO8"/>
             </connections>
-            <point key="canvasLocation" x="132" y="138"/>
+            <point key="canvasLocation" x="131.8840579710145" y="112.16517857142857"/>
         </tableViewCell>
     </objects>
 </document>

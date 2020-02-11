@@ -10,11 +10,19 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var homeContentView: HomeContentView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        homeContentView.layoutIfNeeded()
     }
 }
 

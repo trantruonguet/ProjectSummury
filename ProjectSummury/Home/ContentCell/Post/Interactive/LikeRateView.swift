@@ -11,6 +11,7 @@ import UIKit
 class LikeRateView: UIView {
 
     @IBOutlet var likeRateContentView: UIView!
+    @IBOutlet weak var likeRateLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

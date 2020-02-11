@@ -105,6 +105,9 @@
                         <viewLayoutGuide key="safeArea" id="CrL-xZ-UQc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icon_home_light" id="vqN-IN-CWk"/>
+                    <connections>
+                        <outlet property="homeContentView" destination="alH-My-s9a" id="gef-I8-m0I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCw-BK-bpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

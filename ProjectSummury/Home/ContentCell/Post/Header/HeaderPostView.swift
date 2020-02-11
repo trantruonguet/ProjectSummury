@@ -10,7 +10,7 @@ import UIKit
 
 class HeaderPostView: UIView {
     
-    @IBOutlet var headerContentView: UIView!
+//    @IBOutlet var headerContentView: UIView!
     
     @IBOutlet weak var avatarImage: UIImageView!
     
@@ -34,11 +34,14 @@ class HeaderPostView: UIView {
     }
        
     private func commonInit() {
-        Bundle.main.loadNibNamed("HeaderPostView", owner: self, options: nil)
-        addSubview(headerContentView)
-        headerContentView.frame = self.bounds
-        headerContentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        let view = Bundle.main.loadNibNamed("HeaderPostView", owner: self, options: nil)?[0] as! UIView
+//        Bundle.main.loadNibNamed("HeaderPostView", owner: self, options: nil)
+        view.frame = self.bounds
+        view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        addSubview(view)
         
+        avatarImage.layer.cornerRadius = avatarImage.frame.width/2
+
 //        avatarImage?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: <#T##Selector?#>))
 //
 //        nameLabel?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: <#T##Selector?#>))

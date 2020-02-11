@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeContentView" customModule="ProjectSummury" customModuleProvider="target">
             <connections>
-                <outlet property="ContentView" destination="iN0-l3-epB" id="4jU-5f-bz4"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="QvL-tb-C98"/>
                 <outlet property="tableContentView" destination="rgj-JS-ZNO" id="QSB-ln-5aq"/>
             </connections>
         </placeholder>
