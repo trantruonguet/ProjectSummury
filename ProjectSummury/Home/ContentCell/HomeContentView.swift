@@ -69,7 +69,7 @@ class HomeContentView: UIView {
         
         let oldPostInfo = loadFromRealm()
         
-        Alamofire.request("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=25/json").responseJSON {
+        Alamofire.request("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=100/json").responseJSON {
             (response) in
 
             var postInfos: [PostInfo] = []
@@ -77,7 +77,7 @@ class HomeContentView: UIView {
             guard let value = response.result.value else { return }
             let responseValue = JSON(value)
             if let entry = responseValue["feed"]["entry"].array {
-                for index in 0...min(entry.count, 9) {
+                for index in 0...min(entry.count, 99) {
                     let postInfo = PostInfo(postInfo: entry[index])
                     
                     if !oldPostInfo.isEmpty {
