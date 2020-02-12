@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,11 @@
 		05FB1D9123EAC9BE0038BBF3 /* ContentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FB1D9023EAC9BE0038BBF3 /* ContentViewCell.xib */; };
 		05FB1D9323EAC9CE0038BBF3 /* ContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB1D9223EAC9CE0038BBF3 /* ContentViewCell.swift */; };
 		15DD797BB463300EA6C0B726 /* Pods_ProjectSummury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69201930506FF61FB059496 /* Pods_ProjectSummury.framework */; };
+		B48BBFEE23F39D3C008DC904 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BBFE623F39D3C008DC904 /* HomeVC.swift */; };
+		B48BBFEF23F39D3C008DC904 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48BBFE723F39D3C008DC904 /* HomeVC.xib */; };
+		B48BBFFC23F39D54008DC904 /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BBFF523F39D54008DC904 /* TimeLineCell.swift */; };
+		B48BBFFD23F39D54008DC904 /* TimeLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48BBFF623F39D54008DC904 /* TimeLineCell.xib */; };
+		B48BC00423F3A49F008DC904 /* PhotoOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BC00323F3A49F008DC904 /* PhotoOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +80,11 @@
 		05FB1D9223EAC9CE0038BBF3 /* ContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewCell.swift; sourceTree = "<group>"; };
 		3F79BD0AD57150E45D68D8F9 /* Pods-ProjectSummury.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSummury.release.xcconfig"; path = "Target Support Files/Pods-ProjectSummury/Pods-ProjectSummury.release.xcconfig"; sourceTree = "<group>"; };
 		8B9241349378A5E667033CAB /* Pods-ProjectSummury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSummury.debug.xcconfig"; path = "Target Support Files/Pods-ProjectSummury/Pods-ProjectSummury.debug.xcconfig"; sourceTree = "<group>"; };
+		B48BBFE623F39D3C008DC904 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		B48BBFE723F39D3C008DC904 /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		B48BBFF523F39D54008DC904 /* TimeLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
+		B48BBFF623F39D54008DC904 /* TimeLineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineCell.xib; sourceTree = "<group>"; };
+		B48BC00323F3A49F008DC904 /* PhotoOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoOperations.swift; sourceTree = "<group>"; };
 		E69201930506FF61FB059496 /* Pods_ProjectSummury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSummury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,18 +121,15 @@
 		057D714523E81BF1001E4862 /* ProjectSummury */ = {
 			isa = PBXGroup;
 			children = (
+				B48BBFE223F39D0D008DC904 /* DemoLazyLoading */,
 				05FB1D7523E96F720038BBF3 /* SuggestFollow */,
 				05FB1D7423E96F510038BBF3 /* Account */,
 				05FB1D7323E96F440038BBF3 /* CreatePost */,
 				05FB1D7223E96F380038BBF3 /* Search */,
-				057D715823E91079001E4862 /* Home */,
-				057D714623E81BF1001E4862 /* AppDelegate.swift */,
-				057D714823E81BF1001E4862 /* HomeViewController.swift */,
-				057D714A23E81BF1001E4862 /* Main.storyboard */,
-				057D714D23E81BF3001E4862 /* Assets.xcassets */,
-				057D714F23E81BF3001E4862 /* LaunchScreen.storyboard */,
 				057D715223E81BF3001E4862 /* Info.plist */,
+				057D715823E91079001E4862 /* Home */,
 				057D716823E95AFE001E4862 /* font */,
+				B48BC00123F3A32B008DC904 /* ConfigApp */,
 			);
 			path = ProjectSummury;
 			sourceTree = "<group>";
@@ -288,8 +295,55 @@
 				8B9241349378A5E667033CAB /* Pods-ProjectSummury.debug.xcconfig */,
 				3F79BD0AD57150E45D68D8F9 /* Pods-ProjectSummury.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B48BBFE223F39D0D008DC904 /* DemoLazyLoading */ = {
+			isa = PBXGroup;
+			children = (
+				B48BC00223F3A484008DC904 /* LibraryLazyLoad */,
+				B48BBFF423F39D54008DC904 /* Views */,
+				B48BBFE323F39D3C008DC904 /* ViewController */,
+			);
+			path = DemoLazyLoading;
+			sourceTree = "<group>";
+		};
+		B48BBFE323F39D3C008DC904 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B48BBFE623F39D3C008DC904 /* HomeVC.swift */,
+				B48BBFE723F39D3C008DC904 /* HomeVC.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B48BBFF423F39D54008DC904 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B48BBFF523F39D54008DC904 /* TimeLineCell.swift */,
+				B48BBFF623F39D54008DC904 /* TimeLineCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B48BC00123F3A32B008DC904 /* ConfigApp */ = {
+			isa = PBXGroup;
+			children = (
+				057D714623E81BF1001E4862 /* AppDelegate.swift */,
+				057D714823E81BF1001E4862 /* HomeViewController.swift */,
+				057D714A23E81BF1001E4862 /* Main.storyboard */,
+				057D714D23E81BF3001E4862 /* Assets.xcassets */,
+				057D714F23E81BF3001E4862 /* LaunchScreen.storyboard */,
+			);
+			path = ConfigApp;
+			sourceTree = "<group>";
+		};
+		B48BC00223F3A484008DC904 /* LibraryLazyLoad */ = {
+			isa = PBXGroup;
+			children = (
+				B48BC00323F3A49F008DC904 /* PhotoOperations.swift */,
+			);
+			path = LibraryLazyLoad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,11 +413,13 @@
 				057D714E23E81BF3001E4862 /* Assets.xcassets in Resources */,
 				05FB1D8123EA5AB80038BBF3 /* InteractiveView.xib in Resources */,
 				05FB1D7123E96A480038BBF3 /* SuggestFriendCell.xib in Resources */,
+				B48BBFFD23F39D54008DC904 /* TimeLineCell.xib in Resources */,
 				057D714C23E81BF1001E4862 /* Main.storyboard in Resources */,
 				05FB1D6D23E969580038BBF3 /* PostCell.xib in Resources */,
 				05FB1D8F23EAC91E0038BBF3 /* ContentView.xib in Resources */,
 				05FB1D8923EAC1E00038BBF3 /* DescriptionView.xib in Resources */,
 				057D716A23E95AFE001E4862 /* Billabong.ttf in Resources */,
+				B48BBFEF23F39D3C008DC904 /* HomeVC.xib in Resources */,
 				057D715C23E910DE001E4862 /* HeaderView.xib in Resources */,
 				05AA7CF123EC152100D91EDF /* HeaderPostView.xib in Resources */,
 				05FB1D6F23E969770038BBF3 /* SortPostCell.xib in Resources */,
@@ -427,10 +483,13 @@
 				058C4C1623ED043000C9F9EB /* PostNewCell.swift in Sources */,
 				05FB1D6B23E968CE0038BBF3 /* SuggestFriendCell.swift in Sources */,
 				057D715A23E910CD001E4862 /* HeaderView.swift in Sources */,
+				B48BBFFC23F39D54008DC904 /* TimeLineCell.swift in Sources */,
 				05FB1D6723E968500038BBF3 /* PostCell.swift in Sources */,
 				05FB1D6923E968A20038BBF3 /* SortPostCell.swift in Sources */,
 				057D714723E81BF1001E4862 /* AppDelegate.swift in Sources */,
+				B48BBFEE23F39D3C008DC904 /* HomeVC.swift in Sources */,
 				05FB1D6523E9665F0038BBF3 /* HomeContentView.swift in Sources */,
+				B48BC00423F3A49F008DC904 /* PhotoOperations.swift in Sources */,
 				05FB1D8523EA9BC30038BBF3 /* LikeRateView.swift in Sources */,
 				05FB1D8B23EAC3770038BBF3 /* DescriptionView.swift in Sources */,
 				05AA7CF323EC153300D91EDF /* HeaderPostView.swift in Sources */,
