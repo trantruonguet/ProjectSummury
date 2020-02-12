@@ -9,6 +9,8 @@
 import UIKit
 
 class DescriptionView: UIView {
+    @IBOutlet var descriptionContentView: UIView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var data: PostInfo! {
         didSet {
@@ -16,6 +18,7 @@ class DescriptionView: UIView {
                 if data.isExpended {
                     descriptionLabel.attributedText = NSMutableAttributedString(string: data.descriptionContent)
                 } else {
+                    print(data.postId)
                     let attributedString = NSMutableAttributedString(string: data.descriptionContent.substring(to: 72) + "...")
                     attributedString.append(NSAttributedString(string: " xem thêm", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray]))
                     descriptionLabel.attributedText = attributedString
@@ -25,26 +28,17 @@ class DescriptionView: UIView {
             }
         }
     }
-
-    @IBOutlet var descriptionContentView: UIView!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
     var didExpand: ((Bool) -> ())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         commonInit()
-           
     }
        
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-           
         commonInit()
-           
     }
-       
        
     private func commonInit() {
         Bundle.main.loadNibNamed("DescriptionView", owner: self, options: nil)
@@ -72,24 +66,3 @@ class DescriptionView: UIView {
     
 }
 
-extension String {
-    func index(from: Int) -> Index {
-        return self.index(startIndex, offsetBy: from)
-    }
-
-    func substring(from: Int) -> String {
-        let fromIndex = index(from: from)
-        return String(self[fromIndex...])
-    }
-
-    func substring(to: Int) -> String {
-        let toIndex = index(from: to)
-        return String(self[..<toIndex])
-    }
-
-    func substring(with r: Range<Int>) -> String {
-        let startIndex = index(from: r.lowerBound)
-        let endIndex = index(from: r.upperBound)
-        return String(self[startIndex..<endIndex])
-    }
-}

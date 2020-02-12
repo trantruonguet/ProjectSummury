@@ -7,30 +7,36 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class HeaderPostView: UIView {
     
 //    @IBOutlet var headerContentView: UIView!
     
     @IBOutlet weak var avatarImage: UIImageView!
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var menuImage: UIImageView!
     
+    var data: PostInfo! {
+        didSet {
+            self.nameLabel.text = data.name
+            Alamofire.request(data.avatarUrl! ).responseImage{ [weak self] response in
+                if let image = response.result.value {
+                    self?.avatarImage.image = image
+                }
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         commonInit()
-           
     }
        
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-           
         commonInit()
-           
     }
        
     private func commonInit() {
@@ -41,11 +47,6 @@ class HeaderPostView: UIView {
         addSubview(view)
         
         avatarImage.layer.cornerRadius = avatarImage.frame.width/2
-
-//        avatarImage?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: <#T##Selector?#>))
-//
-//        nameLabel?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: <#T##Selector?#>))
-        
         menuImage?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(menuAction)))
 
     }

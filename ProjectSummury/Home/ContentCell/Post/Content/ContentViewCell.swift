@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import AlamofireImage
+import Alamofire
 
 class ContentViewCell: UIView {
 
@@ -16,7 +18,17 @@ class ContentViewCell: UIView {
     @IBOutlet weak var heartImage: UIImageView!
     @IBOutlet weak var heightContentImage: NSLayoutConstraint!
     
-    var data: PostInfo!
+    var data: PostInfo!{
+        didSet {
+            Alamofire.request(data.imageContent.first! ).responseImage{ [weak self] response in
+                if let image = response.result.value {
+                    self?.contentImage.image = image
+//                    let mainScreenSize = UIScreen.main.bounds.size
+//                    self?.contentPostView?.heightContentImage.constant = ((image.size.height ?? 0.0) / (image.size.width ?? 1.0)) * mainScreenSize.width
+                }
+            }
+        }
+    }
     var likeReload: (() -> ())?
     
     let realm = try! Realm()
@@ -42,7 +54,6 @@ class ContentViewCell: UIView {
         contentViewCell.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleClickContent))
-//        doubleTap.delegate = self
         doubleTap.numberOfTapsRequired = 2
         contentImage.addGestureRecognizer(doubleTap)
     }
@@ -53,7 +64,9 @@ class ContentViewCell: UIView {
                data.likeStatus = true
             }
         }
+        
         likeReload?()
+        
         UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
             self.heartImage.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             self.heartImage.alpha = 1.0

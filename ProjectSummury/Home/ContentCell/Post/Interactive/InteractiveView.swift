@@ -20,6 +20,7 @@ class InteractiveView: UIView {
     
     let realm = try! Realm()
     
+    var sharePost:(([Any]) -> ())?
     var data: PostInfo! {
         didSet {
             if data.likeStatus {
@@ -34,22 +35,19 @@ class InteractiveView: UIView {
                 self.bookMark.image = UIImage.init(named: "icon_save_light")
             }
             
-            
+            let stringLikeRate = String(data.likeRate)
+            self.likeRateView?.likeRateLabel.text = stringLikeRate.convertToStringDotCount() + " lượt thích"
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         commonInit()
-        
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
         commonInit()
-        
     }
     
     private func commonInit() {
@@ -61,7 +59,6 @@ class InteractiveView: UIView {
         likeImageView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(likeAction)))
         shareView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(shareAction)))
         bookMark?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bookMarkAction)))
-        
     }
     
     override func layoutSubviews() {
@@ -69,9 +66,6 @@ class InteractiveView: UIView {
     }
     
     @objc func likeAction () -> Void {
-//        UIView.animate(withDuration: 3) {
-//            self.likeImageView.image = UIImage.init(named: "icon_heart_dark")
-//        }
         
         try! realm.write {
             data.likeStatus = !data.likeStatus
@@ -93,7 +87,8 @@ class InteractiveView: UIView {
     }
     
     @objc func shareAction () -> Void {
-        
+//        let shareDescription = data.descriptionContent
+//        guard let url = URL(string: data.imageContent[] )
     }
     
     @objc func bookMarkAction () -> Void {

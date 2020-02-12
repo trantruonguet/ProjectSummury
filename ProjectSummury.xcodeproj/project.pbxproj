@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,14 +17,16 @@
 		057D716A23E95AFE001E4862 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 057D716923E95AFE001E4862 /* Billabong.ttf */; };
 		058C4C1623ED043000C9F9EB /* PostNewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C4C1423ED043000C9F9EB /* PostNewCell.swift */; };
 		058C4C1723ED043000C9F9EB /* PostNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058C4C1523ED043000C9F9EB /* PostNewCell.xib */; };
+		058DB24A23F39A2A0079FB70 /* PostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DB24923F39A2A0079FB70 /* PostInfo.swift */; };
+		058DB24D23F39C9D0079FB70 /* RealmUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DB24C23F39C9D0079FB70 /* RealmUtils.swift */; };
+		058DB25023F39DC00079FB70 /* ResultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DB24F23F39DC00079FB70 /* ResultsExtension.swift */; };
+		058DB25623F3A3830079FB70 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DB25523F3A3830079FB70 /* StringExtensions.swift */; };
 		05AA7CF123EC152100D91EDF /* HeaderPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05AA7CF023EC152100D91EDF /* HeaderPostView.xib */; };
 		05AA7CF323EC153300D91EDF /* HeaderPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA7CF223EC153300D91EDF /* HeaderPostView.swift */; };
 		05FB1D6323E966450038BBF3 /* HomeContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FB1D6223E966450038BBF3 /* HomeContentView.xib */; };
 		05FB1D6523E9665F0038BBF3 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB1D6423E9665F0038BBF3 /* HomeContentView.swift */; };
-		05FB1D6723E968500038BBF3 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB1D6623E968500038BBF3 /* PostCell.swift */; };
 		05FB1D6923E968A20038BBF3 /* SortPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB1D6823E968A20038BBF3 /* SortPostCell.swift */; };
 		05FB1D6B23E968CE0038BBF3 /* SuggestFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB1D6A23E968CE0038BBF3 /* SuggestFriendCell.swift */; };
-		05FB1D6D23E969580038BBF3 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FB1D6C23E969580038BBF3 /* PostCell.xib */; };
 		05FB1D6F23E969770038BBF3 /* SortPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FB1D6E23E969770038BBF3 /* SortPostCell.xib */; };
 		05FB1D7123E96A480038BBF3 /* SuggestFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FB1D7023E96A480038BBF3 /* SuggestFriendCell.xib */; };
 		05FB1D8123EA5AB80038BBF3 /* InteractiveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FB1D8023EA5AB80038BBF3 /* InteractiveView.xib */; };
@@ -53,14 +55,16 @@
 		057D716923E95AFE001E4862 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 		058C4C1423ED043000C9F9EB /* PostNewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewCell.swift; sourceTree = "<group>"; };
 		058C4C1523ED043000C9F9EB /* PostNewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostNewCell.xib; sourceTree = "<group>"; };
+		058DB24923F39A2A0079FB70 /* PostInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInfo.swift; sourceTree = "<group>"; };
+		058DB24C23F39C9D0079FB70 /* RealmUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtils.swift; sourceTree = "<group>"; };
+		058DB24F23F39DC00079FB70 /* ResultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsExtension.swift; sourceTree = "<group>"; };
+		058DB25523F3A3830079FB70 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		05AA7CF023EC152100D91EDF /* HeaderPostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderPostView.xib; sourceTree = "<group>"; };
 		05AA7CF223EC153300D91EDF /* HeaderPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPostView.swift; sourceTree = "<group>"; };
 		05FB1D6223E966450038BBF3 /* HomeContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeContentView.xib; sourceTree = "<group>"; };
 		05FB1D6423E9665F0038BBF3 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
-		05FB1D6623E968500038BBF3 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		05FB1D6823E968A20038BBF3 /* SortPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPostCell.swift; sourceTree = "<group>"; };
 		05FB1D6A23E968CE0038BBF3 /* SuggestFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestFriendCell.swift; sourceTree = "<group>"; };
-		05FB1D6C23E969580038BBF3 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		05FB1D6E23E969770038BBF3 /* SortPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortPostCell.xib; sourceTree = "<group>"; };
 		05FB1D7023E96A480038BBF3 /* SuggestFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestFriendCell.xib; sourceTree = "<group>"; };
 		05FB1D8023EA5AB80038BBF3 /* InteractiveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InteractiveView.xib; sourceTree = "<group>"; };
@@ -111,6 +115,10 @@
 		057D714523E81BF1001E4862 /* ProjectSummury */ = {
 			isa = PBXGroup;
 			children = (
+				058DB25123F3A17F0079FB70 /* Utils */,
+				058DB24E23F39DAB0079FB70 /* Extensions */,
+				058DB24B23F39C810079FB70 /* RealmUtils */,
+				058DB24823F39A010079FB70 /* Models */,
 				05FB1D7523E96F720038BBF3 /* SuggestFollow */,
 				05FB1D7423E96F510038BBF3 /* Account */,
 				05FB1D7323E96F440038BBF3 /* CreatePost */,
@@ -142,6 +150,38 @@
 				057D716923E95AFE001E4862 /* Billabong.ttf */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		058DB24823F39A010079FB70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				058DB24923F39A2A0079FB70 /* PostInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		058DB24B23F39C810079FB70 /* RealmUtils */ = {
+			isa = PBXGroup;
+			children = (
+				058DB24C23F39C9D0079FB70 /* RealmUtils.swift */,
+			);
+			path = RealmUtils;
+			sourceTree = "<group>";
+		};
+		058DB24E23F39DAB0079FB70 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				058DB24F23F39DC00079FB70 /* ResultsExtension.swift */,
+				058DB25523F3A3830079FB70 /* StringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		058DB25123F3A17F0079FB70 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		05FB1D7223E96F380038BBF3 /* Search */ = {
@@ -243,8 +283,6 @@
 		05FB1D7D23E97C310038BBF3 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				05FB1D6623E968500038BBF3 /* PostCell.swift */,
-				05FB1D6C23E969580038BBF3 /* PostCell.xib */,
 				058C4C1423ED043000C9F9EB /* PostNewCell.swift */,
 				058C4C1523ED043000C9F9EB /* PostNewCell.xib */,
 				05FB1D7A23E97B310038BBF3 /* Interactive */,
@@ -288,7 +326,6 @@
 				8B9241349378A5E667033CAB /* Pods-ProjectSummury.debug.xcconfig */,
 				3F79BD0AD57150E45D68D8F9 /* Pods-ProjectSummury.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -360,7 +397,6 @@
 				05FB1D8123EA5AB80038BBF3 /* InteractiveView.xib in Resources */,
 				05FB1D7123E96A480038BBF3 /* SuggestFriendCell.xib in Resources */,
 				057D714C23E81BF1001E4862 /* Main.storyboard in Resources */,
-				05FB1D6D23E969580038BBF3 /* PostCell.xib in Resources */,
 				05FB1D8F23EAC91E0038BBF3 /* ContentView.xib in Resources */,
 				05FB1D8923EAC1E00038BBF3 /* DescriptionView.xib in Resources */,
 				057D716A23E95AFE001E4862 /* Billabong.ttf in Resources */,
@@ -422,18 +458,21 @@
 			files = (
 				057D714923E81BF1001E4862 /* HomeViewController.swift in Sources */,
 				05FB1D8D23EAC6C50038BBF3 /* ContentView.swift in Sources */,
+				058DB25023F39DC00079FB70 /* ResultsExtension.swift in Sources */,
 				05FB1D9323EAC9CE0038BBF3 /* ContentViewCell.swift in Sources */,
 				05FB1D8323EA5ACA0038BBF3 /* InteractiveView.swift in Sources */,
 				058C4C1623ED043000C9F9EB /* PostNewCell.swift in Sources */,
+				058DB24A23F39A2A0079FB70 /* PostInfo.swift in Sources */,
 				05FB1D6B23E968CE0038BBF3 /* SuggestFriendCell.swift in Sources */,
 				057D715A23E910CD001E4862 /* HeaderView.swift in Sources */,
-				05FB1D6723E968500038BBF3 /* PostCell.swift in Sources */,
 				05FB1D6923E968A20038BBF3 /* SortPostCell.swift in Sources */,
 				057D714723E81BF1001E4862 /* AppDelegate.swift in Sources */,
 				05FB1D6523E9665F0038BBF3 /* HomeContentView.swift in Sources */,
 				05FB1D8523EA9BC30038BBF3 /* LikeRateView.swift in Sources */,
+				058DB24D23F39C9D0079FB70 /* RealmUtils.swift in Sources */,
 				05FB1D8B23EAC3770038BBF3 /* DescriptionView.swift in Sources */,
 				05AA7CF323EC153300D91EDF /* HeaderPostView.swift in Sources */,
+				058DB25623F3A3830079FB70 /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
