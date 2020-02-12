@@ -28,8 +28,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        //        getApi()
-        fetchPhotoDetails()
+        getApiCustom()
     }
     
     func setupTableView() {
@@ -51,6 +50,22 @@ extension HomeVC {
                 for index in 0...min(entry.count, 99) {
                     let postInfo = PostInfo(postInfo: entry[index])
                     self.currentPostInfo.append(postInfo)
+                }
+            }
+            self.tableView.reloadData()
+        }
+    }
+    
+    func getApiCustom() {
+        Alamofire.request("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=100/json").responseJSON {
+            (response) in
+            guard let value = response.result.value else { return }
+            let responseValue = JSON(value)
+            if let entry = responseValue["feed"]["entry"].array {
+                for index in 0...min(entry.count, 99) {
+                    let postInfo = PostInfo(postInfo: entry[index])
+                    let photo = PhotoRecord(name: "name", url: URL(string: postInfo.avatarUrl)!)
+                    self.photos.append(photo)
                 }
             }
             self.tableView.reloadData()
@@ -141,7 +156,9 @@ extension HomeVC {
             
             DispatchQueue.main.async {
                 self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
-                self.tableView.reloadRows(at: [indexPath], with: .none)
+                UIView.performWithoutAnimation {
+                    self.tableView.reloadRows(at: [indexPath], with: .none)
+                }
             }
         }
         
