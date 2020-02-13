@@ -39,7 +39,7 @@ class InteractiveView: UIView {
         }
     }
     
-    var sharePost: ((_ content: [Any]!) -> ())?
+    var sharePost: ((_ content: [Any]?) -> ())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

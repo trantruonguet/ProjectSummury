@@ -18,8 +18,8 @@ class HomeContentView: UIView {
     @IBOutlet weak var tableContentView: UITableView!
     
     var currentPostInfo: [PostInfo] = []
-    var sharePost: ((_ content: [Any]!) -> ())?
-    var menuShow: ((_ content: PostInfo!) -> ())?
+    var sharePost: ((_ content: [Any]?) -> ())?
+    var menuShow: ((_ content: PostInfo?) -> ())?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -104,7 +104,7 @@ extension HomeContentView: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostNewCell", for: indexPath) as! PostNewCell
         cell.data = currentPostInfo[indexPath.row]
         
-        cell.descriptionView.didExpand = { [weak self] isExpand in
+        cell.descriptionView.didExpand = { isExpand in
             UIView.performWithoutAnimation {
                 tableView.reloadRows(at: [indexPath], with: .none)
             }
