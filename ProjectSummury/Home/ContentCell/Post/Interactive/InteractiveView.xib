@@ -37,7 +37,7 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_comment_light" translatesAutoresizingMaskIntoConstraints="NO" id="xTm-wq-vbJ">
                             <rect key="frame" x="46" y="15.5" width="30" height="30"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_share_light" translatesAutoresizingMaskIntoConstraints="NO" id="k5Y-pb-C5X">
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_share_light" translatesAutoresizingMaskIntoConstraints="NO" id="k5Y-pb-C5X">
                             <rect key="frame" x="87" y="15.5" width="30" height="30"/>
                         </imageView>
                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_save_light" translatesAutoresizingMaskIntoConstraints="NO" id="h8b-eW-Y9G">

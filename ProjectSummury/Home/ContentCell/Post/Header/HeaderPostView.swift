@@ -28,6 +28,7 @@ class HeaderPostView: UIView {
             }
         }
     }
+    var menuShow:((_ content: PostInfo) -> ())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,11 +53,6 @@ class HeaderPostView: UIView {
     }
     
     @objc func menuAction () -> Void {
-        
+        menuShow?(data)
     }
-    
-    func fillData(nameTitle: String) {
-        nameLabel.text = nameTitle
-    }
-    
 }

@@ -106,12 +106,74 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icon_home_light" id="vqN-IN-CWk"/>
                     <connections>
+                        <outlet property="headerView" destination="qGI-wt-xyj" id="Mta-Pc-EeT"/>
                         <outlet property="homeContentView" destination="alH-My-s9a" id="gef-I8-m0I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCw-BK-bpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="716" y="109.29535232383809"/>
+        </scene>
+        <!--Popup Menu Controller-->
+        <scene sceneID="f7J-J3-z3r">
+            <objects>
+                <viewController storyboardIdentifier="MenuPopup" id="bxU-I5-Xma" customClass="PopupMenuController" customModule="ProjectSummury" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dQZ-hq-Wsz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZc-lk-Pch">
+                                <rect key="frame" x="67.5" y="258.5" width="240" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDj-LG-QfZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="GuT-93-o3Y"/>
+                                        </constraints>
+                                        <state key="normal" title="Share the Post"/>
+                                        <connections>
+                                            <action selector="shareAction:" destination="bxU-I5-Xma" eventType="touchUpInside" id="256-OY-EII"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBO-Hs-cz5">
+                                        <rect key="frame" x="0.0" y="75" width="240" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="RQv-XJ-b3i"/>
+                                        </constraints>
+                                        <state key="normal" title="Hidden"/>
+                                        <connections>
+                                            <action selector="hiddenAction:" destination="bxU-I5-Xma" eventType="touchUpInside" id="XFz-oa-B5T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="SDj-LG-QfZ" firstAttribute="leading" secondItem="kZc-lk-Pch" secondAttribute="leading" id="9mn-Ie-5xv"/>
+                                    <constraint firstItem="vBO-Hs-cz5" firstAttribute="leading" secondItem="kZc-lk-Pch" secondAttribute="leading" id="GA2-cR-OX3"/>
+                                    <constraint firstAttribute="trailing" secondItem="SDj-LG-QfZ" secondAttribute="trailing" id="QeI-X7-1Ry"/>
+                                    <constraint firstAttribute="height" constant="150" id="S7Z-jG-Rs5"/>
+                                    <constraint firstItem="SDj-LG-QfZ" firstAttribute="top" secondItem="kZc-lk-Pch" secondAttribute="top" id="fov-3n-fZP"/>
+                                    <constraint firstAttribute="bottom" secondItem="vBO-Hs-cz5" secondAttribute="bottom" id="tYu-Vg-l8E"/>
+                                    <constraint firstAttribute="bottom" secondItem="vBO-Hs-cz5" secondAttribute="bottom" id="wpw-zh-fdJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="vBO-Hs-cz5" secondAttribute="trailing" id="xGf-dh-fdr"/>
+                                    <constraint firstAttribute="width" constant="240" id="xQE-1V-eWa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kZc-lk-Pch" firstAttribute="centerY" secondItem="XgN-q7-M0T" secondAttribute="centerY" id="73u-Hj-XLt"/>
+                            <constraint firstItem="kZc-lk-Pch" firstAttribute="centerX" secondItem="XgN-q7-M0T" secondAttribute="centerX" id="PDt-EC-6i3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XgN-q7-M0T"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ra1-Rw-tiL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482.4000000000001" y="107.49625187406298"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="V5h-IN-kUJ">

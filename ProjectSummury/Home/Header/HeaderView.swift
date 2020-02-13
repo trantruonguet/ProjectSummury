@@ -11,41 +11,23 @@ import UIKit
 class HeaderView: UIView {
 
     @IBOutlet var contentView: UIView!
-    
     @IBOutlet weak var openCamera: UIImageView!
-    
     @IBOutlet weak var instagram: UILabel!
-    
     @IBOutlet weak var send: UIImageView!
+    
+    var sendInstagram: (() -> ())?
     
     override init (frame: CGRect) {
         super.init(frame: frame)
-        
         commonInit()
-        
     }
     
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         commonInit()
-        
     }
 
-    
-    @objc func openCameraAction () -> Void {
-        
-    }
-    
-    @objc func reloadHomePageAction () -> Void {
-        
-    }
-    
-    @objc func sendPostAction () -> Void {
-        
-    }
-    
     private func commonInit () {
         Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)
         addSubview(contentView)
@@ -61,4 +43,15 @@ class HeaderView: UIView {
         
     }
     
+    @objc func openCameraAction () -> Void {
+        
+    }
+    
+    @objc func reloadHomePageAction () -> Void {
+        
+    }
+    
+    @objc func sendPostAction () -> Void {
+        sendInstagram?()
+    }
 }

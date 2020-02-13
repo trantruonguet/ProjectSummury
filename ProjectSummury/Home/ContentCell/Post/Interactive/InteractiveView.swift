@@ -20,7 +20,6 @@ class InteractiveView: UIView {
     
     let realm = try! Realm()
     
-    var sharePost:(([Any]) -> ())?
     var data: PostInfo! {
         didSet {
             if data.likeStatus {
@@ -39,6 +38,8 @@ class InteractiveView: UIView {
             self.likeRateView?.likeRateLabel.text = stringLikeRate.convertToStringDotCount() + " lượt thích"
         }
     }
+    
+    var sharePost: ((_ content: [Any]!) -> ())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -69,7 +70,16 @@ class InteractiveView: UIView {
         
         try! realm.write {
             data.likeStatus = !data.likeStatus
+            
+            if data.likeStatus {
+                data.likeRate += 1
+            } else {
+                data.likeRate -= 1
+            }
         }
+        
+        let stringLikeRate = String(data.likeRate)
+        self.likeRateView?.likeRateLabel.text = stringLikeRate.convertToStringDotCount() + " lượt thích"
         
         if data.likeStatus {
             UIView.transition(with: likeImageView,
@@ -87,8 +97,10 @@ class InteractiveView: UIView {
     }
     
     @objc func shareAction () -> Void {
-//        let shareDescription = data.descriptionContent
-//        guard let url = URL(string: data.imageContent[] )
+        let shareDescription = data.descriptionContent
+        guard let urlImageContent = URL(string: data.imageContent.first!) else {return}
+        let shareContent: [Any] = [shareDescription, urlImageContent]
+        sharePost?(shareContent)
     }
     
     @objc func bookMarkAction () -> Void {

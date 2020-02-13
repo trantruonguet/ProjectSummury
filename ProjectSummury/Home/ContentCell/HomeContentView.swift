@@ -18,6 +18,8 @@ class HomeContentView: UIView {
     @IBOutlet weak var tableContentView: UITableView!
     
     var currentPostInfo: [PostInfo] = []
+    var sharePost: ((_ content: [Any]!) -> ())?
+    var menuShow: ((_ content: PostInfo!) -> ())?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -113,6 +115,8 @@ extension HomeContentView: UITableViewDataSource {
             
         }
         
+        cell.interactiveView.sharePost = sharePost
+        cell.headerPostView.menuShow = menuShow
         return cell
     }
     

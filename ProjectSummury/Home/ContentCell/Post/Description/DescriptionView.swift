@@ -18,7 +18,6 @@ class DescriptionView: UIView {
                 if data.isExpended {
                     descriptionLabel.attributedText = NSMutableAttributedString(string: data.descriptionContent)
                 } else {
-                    print(data.postId)
                     let attributedString = NSMutableAttributedString(string: data.descriptionContent.substring(to: 72) + "...")
                     attributedString.append(NSAttributedString(string: " xem thêm", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray]))
                     descriptionLabel.attributedText = attributedString
@@ -50,18 +49,9 @@ class DescriptionView: UIView {
     }
     
     @objc func openDescription () -> Void {
+        data.isExpended = true
+        descriptionLabel.attributedText = NSMutableAttributedString(string: data.descriptionContent)
         didExpand?(data.isExpended)
-        if data.descriptionContent.count > 72 {
-            if data.isExpended {
-                descriptionLabel.attributedText = NSMutableAttributedString(string: data.descriptionContent)
-            } else {
-                let attributedString = NSMutableAttributedString(string: data.descriptionContent.suffix(72).base + "...")
-                attributedString.append(NSAttributedString(string: " xem thêm", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray]))
-                descriptionLabel.attributedText = attributedString
-                
-                data.isExpended = !data.isExpended
-            }
-        }
     }
     
 }

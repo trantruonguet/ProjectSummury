@@ -15,6 +15,7 @@
 		057D715A23E910CD001E4862 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057D715923E910CD001E4862 /* HeaderView.swift */; };
 		057D715C23E910DE001E4862 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057D715B23E910DE001E4862 /* HeaderView.xib */; };
 		057D716A23E95AFE001E4862 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 057D716923E95AFE001E4862 /* Billabong.ttf */; };
+		057FA22323F3F32700D6F8BD /* PopupMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057FA22223F3F32600D6F8BD /* PopupMenuController.swift */; };
 		058C4C1623ED043000C9F9EB /* PostNewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C4C1423ED043000C9F9EB /* PostNewCell.swift */; };
 		058C4C1723ED043000C9F9EB /* PostNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058C4C1523ED043000C9F9EB /* PostNewCell.xib */; };
 		058DB24A23F39A2A0079FB70 /* PostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DB24923F39A2A0079FB70 /* PostInfo.swift */; };
@@ -53,6 +54,7 @@
 		057D715923E910CD001E4862 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		057D715B23E910DE001E4862 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		057D716923E95AFE001E4862 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
+		057FA22223F3F32600D6F8BD /* PopupMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMenuController.swift; sourceTree = "<group>"; };
 		058C4C1423ED043000C9F9EB /* PostNewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewCell.swift; sourceTree = "<group>"; };
 		058C4C1523ED043000C9F9EB /* PostNewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostNewCell.xib; sourceTree = "<group>"; };
 		058DB24923F39A2A0079FB70 /* PostInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInfo.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = font;
 			sourceTree = "<group>";
 		};
+		057FA22123F3F2AE00D6F8BD /* PopupMenu */ = {
+			isa = PBXGroup;
+			children = (
+				057FA22223F3F32600D6F8BD /* PopupMenuController.swift */,
+			);
+			path = PopupMenu;
+			sourceTree = "<group>";
+		};
 		058DB24823F39A010079FB70 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +225,7 @@
 		05FB1D7623E97A860038BBF3 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				057FA22123F3F2AE00D6F8BD /* PopupMenu */,
 				057D715923E910CD001E4862 /* HeaderView.swift */,
 				057D715B23E910DE001E4862 /* HeaderView.xib */,
 			);
@@ -469,6 +480,7 @@
 				057D714723E81BF1001E4862 /* AppDelegate.swift in Sources */,
 				05FB1D6523E9665F0038BBF3 /* HomeContentView.swift in Sources */,
 				05FB1D8523EA9BC30038BBF3 /* LikeRateView.swift in Sources */,
+				057FA22323F3F32700D6F8BD /* PopupMenuController.swift in Sources */,
 				058DB24D23F39C9D0079FB70 /* RealmUtils.swift in Sources */,
 				05FB1D8B23EAC3770038BBF3 /* DescriptionView.swift in Sources */,
 				05AA7CF323EC153300D91EDF /* HeaderPostView.swift in Sources */,
